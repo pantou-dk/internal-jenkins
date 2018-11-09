@@ -30,7 +30,7 @@ pipeline {
       steps {
         container('docker') {
           script {
-            docker.build('docker-releases.danelaw.co.uk/jenkins-with-oc:v3.10.0').push()
+            docker.build('docker-releases.danelaw.co.uk/jenkins-with-oc:v3.10.0', '--pull .').push()
           }
         }
       }
